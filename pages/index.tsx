@@ -3,9 +3,12 @@ import { useCallback, useState } from "react";
 import { useForm } from "react-hook-form";
 import useCrossDomainCredentials from "../useCrossDomainCredentials";
 
+interface CredentialsData {
+  email: string;
+}
 const Home = () => {
   const { register, handleSubmit } = useForm();
-  const [credentials, setCredentials] = useState(null);
+  const [credentials, setCredentials] = useState<CredentialsData| null>();
   const handleLogout = useCallback(() => {
     console.log("logout");
   }, []);
@@ -34,7 +37,7 @@ const Home = () => {
     <PageLayout>
       <PageLayout.Body className="u-backgroundLightest">
         <div className="Container">
-          {credentials ? credentials?.email : "no credentials"}
+          {credentials ? credentials.email : "no credentials"}
           <Form onSubmit={handleSubmit(onSubmit)}>
             <Form.Group controlId="exampleForm.email">
               <Form.Label>Email</Form.Label>
