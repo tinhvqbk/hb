@@ -9,9 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ahaui/css": "^2.0.5",
+    "@ahaui/react": "^2.0.3",
     "next": "12.2.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.34.2"
   },
   "devDependencies": {
     "@types/node": "18.7.14",
