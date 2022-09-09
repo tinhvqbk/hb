@@ -63,7 +63,7 @@ const Home = () => {
               window && window.location.replace("https://hh-tinhvqbk.vercel.app");
             }}
           >
-            Go to HB Portal
+            Go to HH Portal
           </Button>
         </div>
       </PageLayout.Body>
